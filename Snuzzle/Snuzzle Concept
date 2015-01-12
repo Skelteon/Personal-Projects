@@ -1,0 +1,53 @@
+Title: Snuzzle
+Author: Andres Rosales (aka Skelteon)
+Version: 01/02/2015
+
+-First Independent Project-
+
+This is a personal project that stemmed from a concept I had for a mobile/pc game
+that I thought would be a wonderful combination of two classic game genres: the
+traditional Snake game, and matching games (2048 seems to be a good comparison, in 
+this case). 
+In this game, there would be levels of increasing difficulty, where the goal
+is to create a target color pattern on with your snake, but the snake needs only to 
+contain the pattern. Completion of the pattern results ends the level. Patterns are 
+created by picking up "food" blocks, which are randomly placed on the level, in the 
+same sense as Snake. The twist is that the colors correspond to values and will combine
+to form new colors, when activated by a player; for instance: 
+	
+	Let's say the color green corresponds with the value 1, and blue corresponds to 5. If
+	we have a Snuzzle of length 4, where all blocks are green blocks, and they pick up a 
+	fifth green block that's been generated on the level, the Snuzzle will grow to
+	length 5, consisting of 5 green blocks, then those 5 greens will combine to create a 
+	single blue block, of value 5, shrinking the Snuzzle down to a length of 1. The same
+	would follow in the case of getting 5 blue blocks if a purple block represented 
+	25, 5 purple blocks if a red block represented 125, etc.
+	
+At first this seems like the puzzle/pattern combinations might be somewhat limited. It
+is. Which is why I saw fit to employ another aspect to the puzzle solutions: the player
+can control whether the piece of food they just ate will go to the head or tail of the 
+Snuzzle, and if there's an opportunity to combine colors on either end, they can choose
+whether or not it activates. An example of why this is helpful can be found in the 
+following scenario:
+	
+	Let us assume we can only add to a single side, the head, that we cannot choose when
+	to combine blocks, and that the Target Pattern is Purple-Green-Blue.
+	(note: still considering whether reversed patterns will qualify as solutions.
+		Ex: Creating a Blue-Green-Purple sequence, from head-to-tail, with the 
+		above target pattern)
+	
+	Using the same color values as in the last example, we know we'd have to get 5 blues
+	to create our purple, and we need 5 greens to create each of those blues. No problem.
+	Then we'd need a green, followed by a blue. Once we got our green, we'd have to 
+	create a blue right after it. Now we have a problem. In order to create our blue, we 
+	need to collect 5 more greens, but as soon as we collect our fourth additional green,
+	our old green will combine with the 4 new ones and create a blue right next to our purple.
+	
+	If we are able to combine at will, we could collect the proceed as we did above, and
+	not activate the 5 greens, instead waiting until we collected our sixth green, then
+	activating the tail-end of the Snuzzle, resulting in a blue block at the tail.
+	
+	We could also use the two mechanics in different combinations to attain the solution
+	by another process as well, which lends the game more flexibility and opportunity for
+	players to seek optimal solutions.
+	
